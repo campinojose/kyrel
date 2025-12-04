@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrel - Taller Tecnológico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Kyrel - Taller Tecnológico</h1>
+            <p>Aprende a programar controlando a Kyrel</p>
+        </header>
+
+        <div class="main-content">
+            <div class="game-section">
+                <div class="controls">
+                    <button id="runBtn" class="btn btn-primary">▶ Ejecutar</button>
+                    <button id="resetBtn" class="btn btn-secondary">🔄 Reiniciar</button>
+                    <button id="clearBtn" class="btn btn-secondary">🗑️ Limpiar Código</button>
+                </div>
+
+                <div id="grid-container" class="grid-container">
+                    <!-- Grid will be generated here -->
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Posición:</span>
+                        <span id="position">X: 0, Y: 0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Dirección:</span>
+                        <span id="direction">Este</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Bolas:</span>
+                        <span id="balls">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>Tu Código</h3>
+                <textarea id="codeEditor" placeholder="// Escribe tu código aquí
+// Comandos disponibles:
+// kyrel.move()     - Mover hacia adelante
+// kyrel.turnLeft() - Girar a la izquierda
+// kyrel.putBall()  - Colocar una bola
+// kyrel.takeBall() - Tomar una bola
+
+// Ejemplo:
+kyrel.move();
+kyrel.turnLeft();
+kyrel.move();
+kyrel.putBall();
+"></textarea>
+
+                <div class="challenges">
+                    <h3>Desafíos</h3>
+                    <div class="challenge-buttons">
+                        <button class="challenge-btn" data-challenge="1">1. Línea Recta</button>
+                        <button class="challenge-btn" data-challenge="2">2. Cuadrado</button>
+                        <button class="challenge-btn" data-challenge="3">3. Escalera</button>
+                    </div>
+                    <div id="challengeDescription" class="challenge-description">
+                        Selecciona un desafío para comenzar
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📚 Instrucciones</h3>
+            <div class="instruction-grid">
+                <div class="instruction-item">
+                    <strong>kyrel.move()</strong>
+                    <p>Mueve a Kyrel una casilla hacia adelante en la dirección que está mirando</p>
+                </div>
+                <div class="instruction-item">
+                    <strong>kyrel.turnLeft()</strong>
+                    <p>Gira a Kyrel 90 grados hacia la izquierda</p>
+                </div>
+                <div class="instruction-item">
+                    <strong>kyrel.putBall()</strong>
+                    <p>Coloca una bola en la posición actual de Kyrel</p>
+                </div>
+                <div class="instruction-item">
+                    <strong>kyrel.takeBall()</strong>
+                    <p>Recoge una bola de la posición actual</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="kyrel.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
