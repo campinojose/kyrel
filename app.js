@@ -157,8 +157,33 @@ async function executeCode() {
             await delay(200);
         };
         
-        // Execute the code
-        await eval(`(async function() { ${code} })()`);
+        // Basic security validation - block obviously dangerous patterns
+        // This is a simple educational tool, so we use a blacklist approach
+        const dangerousPatterns = [
+            /document\./gi,
+            /window\./gi,
+            /fetch\(/gi,
+            /XMLHttpRequest/gi,
+            /eval\(/gi,
+            /Function\(/gi,
+            /import\s/gi,
+            /require\(/gi,
+            /__proto__/gi,
+            /constructor/gi,
+            /prototype/gi
+        ];
+        
+        for (const pattern of dangerousPatterns) {
+            if (pattern.test(code)) {
+                throw new Error('El código contiene patrones no permitidos por seguridad.');
+            }
+        }
+        
+        // Execute the code in a more controlled manner
+        // Using Function constructor with limited scope
+        const executeFn = new Function('kyrel', `return (async function() { ${code} })();`);
+        await executeFn(kyrel);
+        
         
         // Restore original functions
         kyrel.move = originalMove;
@@ -191,7 +216,7 @@ function clearCode() {
 }
 
 // Load challenge
-function loadChallenge(challengeId) {
+function loadChallenge(challengeId, targetButton) {
     const challenge = challenges[challengeId];
     if (!challenge) return;
     
@@ -199,13 +224,19 @@ function loadChallenge(challengeId) {
     document.querySelectorAll('.challenge-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    event.target.classList.add('active');
+    if (targetButton) {
+        targetButton.classList.add('active');
+    }
     
-    // Update description
-    document.getElementById('challengeDescription').innerHTML = `
-        <strong>${challenge.title}</strong>
-        <p>${challenge.description}</p>
-    `;
+    // Update description - using textContent to prevent XSS
+    const descElement = document.getElementById('challengeDescription');
+    descElement.innerHTML = ''; // Clear previous content
+    const titleElement = document.createElement('strong');
+    titleElement.textContent = challenge.title;
+    const descriptionElement = document.createElement('p');
+    descriptionElement.textContent = challenge.description;
+    descElement.appendChild(titleElement);
+    descElement.appendChild(descriptionElement);
     
     // Initialize game with challenge settings
     initGame(
@@ -230,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.challenge-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const challengeId = parseInt(btn.dataset.challenge);
-            loadChallenge(challengeId);
+            loadChallenge(challengeId, e.target);
         });
     });
     
