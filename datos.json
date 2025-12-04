@@ -1,0 +1,328 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Camiseta Deportiva",
+      "categoria": "Camisas",
+      "sede": "Norte",
+      "cantidad": 15,
+      "precio": 25.99
+    },
+    {
+      "id": 2,
+      "nombre": "Camiseta Casual",
+      "categoria": "Camisas",
+      "sede": "Norte",
+      "cantidad": 20,
+      "precio": 22.5
+    },
+    {
+      "id": 3,
+      "nombre": "Camiseta Premium",
+      "categoria": "Camisas",
+      "sede": "Norte",
+      "cantidad": 10,
+      "precio": 35.0
+    },
+    {
+      "id": 4,
+      "nombre": "BUHODEMIA™",
+      "categoria": "Camisas",
+      "sede": "Centro",
+      "cantidad": 10,
+      "precio": 28.0
+    },
+    {
+      "id": 5,
+      "nombre": "CR7",
+      "categoria": "Camisas",
+      "sede": "Centro",
+      "cantidad": 5,
+      "precio": 45.0
+    },
+    {
+      "id": 6,
+      "nombre": "LOVE",
+      "categoria": "Camisas",
+      "sede": "Centro",
+      "cantidad": 5,
+      "precio": 20.0
+    },
+    {
+      "id": 7,
+      "nombre": "Camiseta Estampada",
+      "categoria": "Camisas",
+      "sede": "Sur",
+      "cantidad": 25,
+      "precio": 30.0
+    },
+    {
+      "id": 8,
+      "nombre": "Camiseta Básica",
+      "categoria": "Camisas",
+      "sede": "Sur",
+      "cantidad": 30,
+      "precio": 18.5
+    },
+    {
+      "id": 9,
+      "nombre": "Saco Formal",
+      "categoria": "Sacos",
+      "sede": "Norte",
+      "cantidad": 8,
+      "precio": 120.0
+    },
+    {
+      "id": 10,
+      "nombre": "Saco Casual",
+      "categoria": "Sacos",
+      "sede": "Norte",
+      "cantidad": 12,
+      "precio": 95.0
+    },
+    {
+      "id": 11,
+      "nombre": "Saco Ejecutivo",
+      "categoria": "Sacos",
+      "sede": "Centro",
+      "cantidad": 6,
+      "precio": 150.0
+    },
+    {
+      "id": 12,
+      "nombre": "Saco Slim Fit",
+      "categoria": "Sacos",
+      "sede": "Centro",
+      "cantidad": 9,
+      "precio": 110.0
+    },
+    {
+      "id": 13,
+      "nombre": "Saco Clásico",
+      "categoria": "Sacos",
+      "sede": "Sur",
+      "cantidad": 15,
+      "precio": 135.0
+    },
+    {
+      "id": 14,
+      "nombre": "Univalle",
+      "categoria": "Camisas",
+      "sede": "Centro",
+      "cantidad": 4,
+      "precio": 10.0
+    }
+  ],
+  "ventas": [
+    {
+      "id": 1,
+      "fecha": "2025-11-13",
+      "cliente": "Juan Pérez",
+      "producto_id": 1,
+      "cantidad": 2,
+      "total": 51.98,
+      "empleado_carnet": "EMP001"
+    },
+    {
+      "id": 2,
+      "fecha": "2025-11-12",
+      "cliente": "María García",
+      "producto_id": 5,
+      "cantidad": 1,
+      "total": 45.0,
+      "empleado_carnet": "EMP003"
+    },
+    {
+      "id": 3,
+      "fecha": "2025-12-04",
+      "cliente": "Alan",
+      "producto_id": 14,
+      "cantidad": 2,
+      "total": 20.0,
+      "empleado_carnet": "EMP002"
+    }
+  ],
+  "empleados": [
+    {
+      "carnet": "EMP001",
+      "nombre": "Carlos Ramírez",
+      "sede": "Norte",
+      "horas_trabajadas": 160,
+      "ventas_realizadas": 45
+    },
+    {
+      "carnet": "EMP002",
+      "nombre": "Ana Martínez",
+      "sede": "Norte",
+      "horas_trabajadas": 155,
+      "ventas_realizadas": 39
+    },
+    {
+      "carnet": "EMP003",
+      "nombre": "Luis Torres",
+      "sede": "Centro",
+      "horas_trabajadas": 168,
+      "ventas_realizadas": 52
+    },
+    {
+      "carnet": "EMP004",
+      "nombre": "María González",
+      "sede": "Centro",
+      "horas_trabajadas": 140,
+      "ventas_realizadas": 41
+    },
+    {
+      "carnet": "EMP005",
+      "nombre": "Pedro Sánchez",
+      "sede": "Sur",
+      "horas_trabajadas": 170,
+      "ventas_realizadas": 60
+    },
+    {
+      "carnet": "EMP006",
+      "nombre": "Laura Díaz",
+      "sede": "Sur",
+      "horas_trabajadas": 152,
+      "ventas_realizadas": 47
+    }
+  ],
+  "asistencias": [
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP001",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP002",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP003",
+      "presente": false
+    },
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP004",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP005",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-01",
+      "empleado_carnet": "EMP006",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP001",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP002",
+      "presente": false
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP003",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP004",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP005",
+      "presente": true
+    },
+    {
+      "fecha": "2025-12-02",
+      "empleado_carnet": "EMP006",
+      "presente": false
+    }
+  ],
+  "incapacidades": [
+    {
+      "empleado_carnet": "EMP003",
+      "fecha_inicio": "2025-11-20",
+      "fecha_fin": "2025-11-25",
+      "motivo": "Gripe"
+    },
+    {
+      "empleado_carnet": "EMP002",
+      "fecha_inicio": "2025-11-15",
+      "fecha_fin": "2025-11-18",
+      "motivo": "Lesión"
+    }
+  ],
+  "movimientos": [
+    {
+      "id": 1,
+      "fecha": "2025-11-13",
+      "producto_id": 1,
+      "tipo": "Entrada",
+      "cantidad": 50,
+      "sede": "Norte"
+    },
+    {
+      "id": 2,
+      "fecha": "2025-11-12",
+      "producto_id": 2,
+      "tipo": "Salida",
+      "cantidad": 30,
+      "sede": "Centro"
+    },
+    {
+      "id": 3,
+      "fecha": "2025-11-11",
+      "producto_id": 7,
+      "tipo": "Salida",
+      "cantidad": 20,
+      "sede": "Sur"
+    },
+    {
+      "id": 4,
+      "fecha": "2025-11-10",
+      "producto_id": 8,
+      "tipo": "Salida",
+      "cantidad": 10,
+      "sede": "Sur"
+    },
+    {
+      "id": 5,
+      "fecha": "2025-12-04",
+      "producto_id": 14,
+      "tipo": "Entrada",
+      "cantidad": 5,
+      "sede": "Centro"
+    },
+    {
+      "id": 6,
+      "fecha": "2025-12-04",
+      "producto_id": 14,
+      "tipo": "Venta",
+      "cantidad": 2,
+      "sede": "Centro"
+    },
+    {
+      "id": 7,
+      "fecha": "2025-12-04",
+      "producto_id": 14,
+      "tipo": "Devolución",
+      "cantidad": 1,
+      "sede": "Centro"
+    }
+  ],
+  "configuracion": {
+    "proximo_id_producto": 15,
+    "proximo_id_venta": 4,
+    "proximo_id_movimiento": 8
+  }
+}
