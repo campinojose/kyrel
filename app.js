@@ -36,16 +36,16 @@ for (let side = 0; side < 4; side++) {
     },
     3: {
         title: 'Desafío 3: Escalera',
-        description: 'Haz que Kyrel cree una escalera de 4 escalones. Cada escalón es una bola, y debe subir hacia la derecha.',
+        description: 'Haz que Kyrel cree una escalera de 4 escalones. Cada escalón es una bola, y debe subir hacia la derecha y arriba.',
         gridSize: { width: 8, height: 8 },
-        startPos: { x: 0, y: 7 },
+        startPos: { x: 0, y: 4 },
         solution: `// Solución sugerida:
 for (let i = 0; i < 4; i++) {
     kyrel.putBall();
     kyrel.move();
-    kyrel.turnLeft();
-    kyrel.move();
     kyrel.turnRight();
+    kyrel.move();
+    kyrel.turnLeft();
 }`
     }
 };
@@ -165,7 +165,6 @@ async function executeCode() {
             /fetch\(/gi,
             /XMLHttpRequest/gi,
             /eval\(/gi,
-            /Function\(/gi,
             /import\s/gi,
             /require\(/gi,
             /__proto__/gi,
